@@ -2,6 +2,9 @@ doctype 5
 html
   head
     title= title
+    //[if lt IE 9]
+      script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
+    script(data-main="/js/core.js", src="/js/libs/require.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content

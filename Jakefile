@@ -16,6 +16,7 @@
 		files.include('Jakefile');
 		files.include('**/*.js');
 		files.exclude('node_modules');
+		files.exclude('js/libs');
 
 		if(!lint.validateFileList(files.toArray(), options, {}))
 			fail('lint failed');
