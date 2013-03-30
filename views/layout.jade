@@ -5,6 +5,11 @@ html
     //[if lt IE 9]
       script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
     script(data-main="/js/core.js", src="/js/libs/require.js")
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
   body
-    block content
+    div.container
+      div.navbar.navbar-fixed-top
+        div.navbar-inner
+          div.container
+            a.brand(href="/")= title
+      block content
