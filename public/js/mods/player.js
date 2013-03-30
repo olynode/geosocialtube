@@ -2,14 +2,17 @@
 /*globals define */
 'use strict';
 
-define(['jquery'], function($){
+define(['jquery', 'mods/sockets'], function($, sockets){
 
 	var p = {};
 
 	p.setup = function(){
-		console.log('setting up player');
+		sockets.on('play', p.play);
 	};
 
+	p.play = function(video){
+		console.log(video);
+	};
 	return p;
 
 });

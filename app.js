@@ -1,9 +1,11 @@
 'use strict';
 
 var express = require('express'),
+   sockets = require('socket.io'),
    routes = require('./routes'),
    user = require('./routes/user'),
    youtube = require('./routes/youtube'),
+   listeners = require('./listeners'),
    http = require('http'),
    path = require('path');
 
@@ -29,6 +31,11 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/videos', youtube.getVideos);
 
-http.createServer(app).listen(app.get('port'), function(){
+var server = http.createServer(app);
+
+var io = sockets.listen(server);
+listeners.listen(io);
+
+server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
