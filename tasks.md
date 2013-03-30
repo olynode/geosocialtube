@@ -10,3 +10,8 @@ Chat system
 
 Google/Bing? Maps Geo location
 	display a map of the geo location of the video
+
+Video player
+
+Gravatar
+	user icons are gravatar based
