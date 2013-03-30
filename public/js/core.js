@@ -7,10 +7,11 @@ require.config({
     baseUrl: '/js/',
     paths:{
         'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min',
-        'bootstrap': "libs/bootstrap.min"
+        'socket.io': '../socket.io/socket.io',
+        'bootstrap': 'libs/bootstrap.min'
     }
 });
 
-require(['jquery', 'mods/player', 'bootstrap'], function($, player){
+require(['jquery', 'mods/player', 'mods/sockets', 'bootstrap'], function($, player, sockets){
     player.setup();
 });
