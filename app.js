@@ -34,6 +34,12 @@ app.get('/videos', youtube.getVideos);
 var server = http.createServer(app);
 
 var io = sockets.listen(server);
+io.set('transports', [
+   'flashsocket',
+   'htmlfile',
+   'xhr-polling',
+   'jsonp-polling'
+  ]);
 listeners.listen(io);
 
 server.listen(app.get('port'), function(){
