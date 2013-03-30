@@ -2,6 +2,8 @@
 (function() {
 	'use strict';
 
+	var printOptions = { printStdout: true, printStderr: true };
+
 	desc('build and test');
 	task('default',['lint', 'test']);
 
@@ -31,23 +33,17 @@
 		});
 	}, { async: true });
 
+	desc('deploy to azure');
+	task('deploy', ['default'], { async: true }, function(){
+		var command = 'git push azure master';
+        jake.exec(command, complete, printOptions);
+	});
 
-
-	function sh(command, callback) {
-		var stdout = '';
-		var processOptions = { printStdout:true, printStderr:true };
-		var process = jake.createExec(command, processOptions);
-		
-		process.on('stdout', function(chunk){
-			stdout += chunk;
-		});
-		
-		process.on('cmdEnd', function(){
-			callback(stdout);
-		});
-		
-		process.run();
-	}
+	desc('push to github');
+	task('github', ['default'], { async: true }, function(){
+		var command = 'git push origin master';
+        jake.exec(command, complete, printOptions);
+	});
 
 	function nodeLintOptions() {
 		return {
