@@ -1,0 +1,23 @@
+{
+  "name": "nodebootcamp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "jake": "~0.5.8",
+    "nodeunit": "~0.7.4",
+    "jake-jshint": "0.0.4",
+    "express": "~3.1.0",
+    "jade": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./jake.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:olynode/geosocialtube.git"
+  },
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
