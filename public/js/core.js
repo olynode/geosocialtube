@@ -12,6 +12,7 @@ require.config({
     }
 });
 
-require(['jquery', 'mods/player', 'mods/sockets', 'bootstrap'], function($, player, sockets){
+require(['jquery', 'mods/player', 'mods/chat', 'bootstrap'], function($, player, chat){
     player.setup();
+    chat.setup();
 });

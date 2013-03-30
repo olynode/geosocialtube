@@ -3,14 +3,17 @@
   "version": "0.0.0",
   "description": "",
   "main": "app.js",
-  "engines":{"node": "0.8.2"},
+  "engines": {
+    "node": "0.8.X"
+  },
   "dependencies": {
     "jake": "~0.5.8",
     "nodeunit": "~0.7.4",
     "jake-jshint": "0.0.4",
     "express": "~3.1.0",
     "jade": "*",
-    "socket.io": "~0.9.14"
+    "socket.io": "~0.9.14",
+    "youtube-feeds": "~2.2.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -21,5 +24,5 @@
     "url": "git@github.com:olynode/geosocialtube.git"
   },
   "license": "BSD",
-  "readmeFilename": "README.md"
+  "readmeFilename": "readme.md"
 }

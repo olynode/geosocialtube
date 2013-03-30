@@ -7,11 +7,11 @@ define(['jquery', 'mods/sockets'], function($, socket){
 	var p = {};
 
 	p.setup = function(){
-		socket.on('play', p.play);
+		socket.on('message', p.message);
 	};
 
-	p.play = function(video){
-		console.log(video);
+	p.message = function(message){
+		console.log(message);
 	};
 	return p;
 
