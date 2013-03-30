@@ -45,6 +45,12 @@
         jake.exec(command, complete, printOptions);
 	});
 
+	desc('run the server');
+	task('server', ['default'], function(){
+		var command = 'node app.js';
+		jake.exec(command, complete, printOptions);
+	});
+
 	function nodeLintOptions() {
 		return {
 			bitwise: true,
