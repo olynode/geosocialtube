@@ -16,7 +16,7 @@ exports.listen = function(io, socket){
 
 	var getVideos = function(callback){
 		youtube.feeds.standard( region + "/most_popular", {time: 'today'}, function(err, videos){
-		  callback(videos.items);
+			callback(videos.items);
 		});
 	};
 
