@@ -3,8 +3,6 @@
 var express = require('express'),
    sockets = require('socket.io'),
    routes = require('./routes'),
-   user = require('./routes/user'),
-   youtube = require('./routes/youtube'),
    listeners = require('./listeners'),
    http = require('http'),
    path = require('path');
@@ -28,8 +26,6 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
-app.get('/videos', youtube.getVideos);
 
 var server = http.createServer(app);
 
