@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "main": "app.js",
-  "engines":{"node": "0.8.20"},
+  "engines":{"node": "0.8.2"},
   "dependencies": {
     "jake": "~0.5.8",
     "nodeunit": "~0.7.4",
