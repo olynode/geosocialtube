@@ -10,6 +10,7 @@ require.config({
     }
 });
 
-require(['jquery'], function($){
+require(['jquery', 'mods/woot'], function($, woot){
     console.log('woot');
+    woot.sayWoot();
 });
