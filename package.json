@@ -1,0 +1,22 @@
+{
+  "name": "nodebootcamp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "jake": "~0.5.8",
+    "nodeunit": "~0.7.4",
+    "jake-jshint": "0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./jake.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Bobby Johnson",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
