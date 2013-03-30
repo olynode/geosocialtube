@@ -5,7 +5,7 @@ var player = require('./player'),
 
 exports.listen = function(io){
 	io.sockets.on('connection', function (socket) {
-		player.listen(socket);
-		chat.listen(socket);
+		player.listen(io, socket);
+		chat.listen(io, socket);
 	});
 };

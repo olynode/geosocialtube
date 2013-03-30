@@ -1,8 +1,7 @@
 'use strict';
 
-exports.listen = function(socket){
+exports.listen = function(io, socket){
 	socket.on('play', function(data){
-			console.log('play');
-			socket.emit('play', data);
+			io.sockets.emit('play', data);
 		});
 };

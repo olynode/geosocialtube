@@ -1,12 +1,12 @@
 'use strict';
 
-exports.listen = function(socket){
+exports.listen = function(io, socket){
 	
-	socket.on('user-connected', function(user){
-		socket.emit('user-connected', user);
+	socket.on('user-connected', function(data){
+		io.sockets.emit('user-connected', data);
 	});
 
 	socket.on('message', function(data){
-			socket.emit('message',data);
+			io.sockets.emit('message',data);
 	});
 };

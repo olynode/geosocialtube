@@ -8,14 +8,9 @@ define(['jquery', 'mods/sockets'], function($, socket){
 	var user = { name: 'anonymous' };
 
 	p.setup = function(){
-		socket.on('connect', p.connect);
 		socket.on('user-connected', p.userConnected);
 		socket.on('message', p.message);
 		$('.chat input[type="submit"]').on('click', p.submitClick);
-	};
-
-	p.connect = function(){
-		
 	};
 
 	p.submitClick = function(){
