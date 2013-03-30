@@ -12,7 +12,8 @@ require.config({
     }
 });
 
-require(['jquery', 'mods/player', 'mods/chat', 'bootstrap'], function($, player, chat){
+require(['jquery', 'mods/player', 'mods/chat', 'mods/map', 'bootstrap'], function($, player, chat, map){
     player.setup();
     chat.setup();
+    map.setup();
 });
