@@ -12,6 +12,6 @@ require.config({
     }
 });
 
-require(['jquery', 'mods/player', 'mods/sockets', 'bootstrap'], function($, player, sockets){
+require(['jquery', 'mods/player', 'bootstrap'], function($, player){
     player.setup();
 });
